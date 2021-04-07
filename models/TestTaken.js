@@ -5,13 +5,13 @@ const TestTakenSchema = new Schema({
     // question_one: {type: String, required: true},
     // answer_one: {type: Number, required: true},
 
-    extraversion: [
-        {type: mongoose.Schema.Types.ObjectId,
-        ref: "Question"},
-        {type: mongoose.Schema.Types.ObjectId,
-        ref:"User"},
-        {answer_extraversion: [{type: Number, required: true}]},
-    ],
+    // extraversion: [
+    //     {type: mongoose.Schema.Types.ObjectId,
+    //     ref: "Question"},
+    //     {type: mongoose.Schema.Types.ObjectId,
+    //     ref:"User"},
+    //     {answer_extraversion: [{type: Number, required: true}]},
+    // ],
     
 
     Question: {

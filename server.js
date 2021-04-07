@@ -1,5 +1,7 @@
 // imports
 const mongoose = require('mongoose')
+const cors = require('cors')
+
 require('dotenv').config();
 const express = require('express');
 const routes = require('./routes');
@@ -11,7 +13,7 @@ const app = express();
 
 // middleware - JSON parsing
 app.use(express.json());
-
+app.use(cors())
 
 // middleware - API routes
 app.use('/api/questions', routes.questions);
