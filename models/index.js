@@ -14,6 +14,8 @@ const db = mongoose.connection
 module.exports = {
     db,
     Question: require('./Question-model'),
+    TestTaken: require('./TestTaken'),
+    TestResult: require('./TestResult'),
 }
 
 // module.exports = {

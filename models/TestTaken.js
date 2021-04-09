@@ -23,21 +23,16 @@ const TestTakenSchema = new Schema({
         ref:"User"
     },
 
-    extraversion_answers: [
-        { type: Number, required: true}  
-    ],
-    agreeableness_answers: [
-        { type: Number, required: true}  
-    ],
-    conscientiousness_answers: [
-        { type: Number, required: true}  
-    ],
-    emotional_stability_answers: [
-        { type: Number, required: true}  
-    ],
-    intellect_answers: [
-        { type: Number, required: true}  
-    ],
+    extraversion: 
+        { type: Number, required: true},
+    agreeableness: 
+        { type: Number, required: true},
+    conscientiousness: 
+        { type: Number, required: true},
+    emotional_stability: 
+        { type: Number, required: true},
+    intellect: 
+        { type: Number, required: true},
 
 
 
@@ -55,6 +50,6 @@ const TestTakenSchema = new Schema({
 // })
 
 
-const TestTaken = mongoose.model('testTaken', TestTakenSchema);
+const TestTaken = mongoose.model('TestTaken', TestTakenSchema);
 
 module.exports = TestTaken;
