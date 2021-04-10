@@ -35,7 +35,8 @@ const TestTakenSchema = new Schema({
         { type: Number, required: true},
 
     name:
-        { type: String, required: true},
+        {type: String},
+
 
 
     completed: Boolean,
