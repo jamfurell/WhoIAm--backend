@@ -22,6 +22,7 @@ const index = (req, res) => {
             res.status(200).json({ TestTaken: foundTestTaken });
         });
         };
+
         const create = (req, res) => {
             console.log(req.body, "<====req.body")
         db.TestTaken.create(req.body, (err, savedTestTaken) => {
@@ -29,6 +30,7 @@ const index = (req, res) => {
             res.status(201).json({ TestTaken: savedTestTaken });
         });
         };
+
         const update = (req, res) => {
             db.TestTaken.findByIdAndUpdate(
                 req.params.id,
@@ -45,10 +47,24 @@ const index = (req, res) => {
                 }
             );
         };
+
+
+        const destroy = (req, res) => {
+            db.TestTaken.findByIdAndDelete(req.params.id, (err, deletedTestTaken) => {
+                if (err) console.log("Error in TestTakens#destroy:", err);
+                if (!deletedTestTaken) {
+                return res.status(200).json({
+                    message: "TestTaken with provided ID could not be found for delete.",
+                });
+                }
+                res.status(200).json({ TestTaken: deletedTestTaken });
+            });
+        };
         
         module.exports = {
         index,
         show,
         create,
         update,
+        destroy, 
     };
