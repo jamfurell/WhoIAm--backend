@@ -29,9 +29,26 @@ const index = (req, res) => {
             res.status(201).json({ TestTaken: savedTestTaken });
         });
         };
+        const update = (req, res) => {
+            db.TestTaken.findByIdAndUpdate(
+                req.params.id,
+                req.body,
+                { new: true },
+                (err, updatedTestTaken) => {
+                if (err) console.log("Error in TestTaken#update:", err);
+                if (!updatedTestTaken) {
+                    return res.status(200).json({
+                    message: "TestTaken with provided ID could not be found for update.",
+                    });
+                }
+                res.status(200).json({ TestTaken: updatedTestTaken });
+                }
+            );
+        };
         
         module.exports = {
         index,
         show,
         create,
+        update,
     };

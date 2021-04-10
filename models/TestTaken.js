@@ -34,7 +34,8 @@ const TestTakenSchema = new Schema({
     intellect: 
         { type: Number, required: true},
 
-
+    name:
+        {type: String},
 
 
     completed: Boolean,

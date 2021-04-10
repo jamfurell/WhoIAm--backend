@@ -5,5 +5,6 @@ const ctrl = require('../controllers');
 router.get('/', ctrl.TestTaken.index)
 router.get('/:id', ctrl.TestTaken.show);
 router.post('/', ctrl.TestTaken.create);
+router.put('/:id', ctrl.TestTaken.update);
 
 module.exports = router
