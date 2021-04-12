@@ -1,4 +1,5 @@
 const db = require("../models");
+
 const index = (req, res) => {
     db.TestTaken.find({}, (err, foundTestTakens) => {
         if (err) {
@@ -11,6 +12,7 @@ const index = (req, res) => {
         res.status(200).json({ TestTakens: foundTestTakens });
     });
 };
+
 
 const show = (req, res) => {
     db.TestTaken.findById(req.params.id, (err, foundTestTaken) => {
@@ -68,3 +70,4 @@ module.exports = {
     update,
     destroy, 
 };
+
