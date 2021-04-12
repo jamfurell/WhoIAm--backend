@@ -22,7 +22,6 @@ const TestTakenSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref:"User"
     },
-
     extraversion: 
         { type: Number, required: true},
     agreeableness: 
@@ -33,22 +32,12 @@ const TestTakenSchema = new Schema({
         { type: Number, required: true},
     intellect: 
         { type: Number, required: true},
-
     name:
         {type: String},
 
 
     completed: Boolean,
 });
-
-// const QuestionSchema = new Schema ({
-//     name: {type: String, required: true},
-//     founded: {type: Date, default: Date.now},
-//     employees:{type: Number},
-//     active: Boolean,
-//     products: [{type: String}],
-//     CEO: {name: String, age: Number}
-// })
 
 
 const TestTaken = mongoose.model('TestTaken', TestTakenSchema);
