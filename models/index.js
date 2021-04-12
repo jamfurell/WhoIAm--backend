@@ -17,7 +17,3 @@ module.exports = {
     TestTaken: require('./TestTaken'),
     TestResult: require('./TestResult'),
 }
-
-// module.exports = {
-//     Game: require('./game'),
-// };
