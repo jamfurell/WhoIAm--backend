@@ -5,6 +5,7 @@
 
 #testing 
 /routes/auth.js
+/routes/TestResult.js
 /models/TestResult.js
 /models/User.js
 /middleware
