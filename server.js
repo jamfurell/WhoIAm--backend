@@ -1,5 +1,5 @@
 // imports
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const cors = require('cors')
 
 require('dotenv').config();
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 })
 
 // connection
-app.listen(port, () => console.log(process.env.VAR,`Server is running on port ${port}`));
+app.listen(port, () => console.log(`Server is running on port ${port}`));
 
 
 
