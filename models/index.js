@@ -15,5 +15,4 @@ module.exports = {
     db,
     Question: require('./Question-model'),
     TestTaken: require('./TestTaken'),
-    TestResult: require('./TestResult'),
 }
