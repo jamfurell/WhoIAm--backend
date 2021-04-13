@@ -7,7 +7,7 @@ mongoose.connect(process.env.MONGODB_URI,{
     useCreateIndex: true
 })
 .then(() => console.log("MongoDB successfully connected..."))
-.catch(err => console.log(`MongoDB connection error: ${error}`))
+.catch(err => console.log(`MongoDB connection error: ${err}`))
 
 const db = mongoose.connection
 

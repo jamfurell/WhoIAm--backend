@@ -18,7 +18,6 @@ app.use(cors())
 // middleware - API routes
 app.use('/api/questions', routes.questions);
 app.use('/TestTaken', routes.TestTaken);
-app.use('/TestResult', routes.TestResult);
 
 app.get('/', (req, res) => {
     res.send("Hello World")
