@@ -1,5 +1,6 @@
 const db = require ('../models')
 
+//find all question document in database
 const index = (req, res) => {
     db.Question.find({}, (err, foundQuestions) =>{
         if (err){

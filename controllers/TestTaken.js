@@ -13,7 +13,7 @@ const index = (req, res) => {
     });
 };
 
-
+//find testtaken data that match testId
 const show = (req, res) => {
     db.TestTaken.findById(req.params.id, (err, foundTestTaken) => {
         if (err) console.log("Error in TestTakens#show:", err);
@@ -26,6 +26,7 @@ const show = (req, res) => {
     });
 };
 
+//creates new testtaken document with results stored in form
 const create = (req, res) => {
     db.TestTaken.create(req.body, (err, savedTestTaken) => {
         if (err) console.log("Error in TestTakens#create:", err);
@@ -33,6 +34,7 @@ const create = (req, res) => {
     });
 };
 
+//update testtaken data to include new name value from form
 const update = (req, res) => {
     db.TestTaken.findByIdAndUpdate(
         req.params.id,
@@ -50,7 +52,7 @@ const update = (req, res) => {
     );
 };
 
-
+//delete testtaken data
 const destroy = (req, res) => {
     db.TestTaken.findByIdAndDelete(req.params.id, (err, deletedTestTaken) => {
         if (err) console.log("Error in TestTakens#destroy:", err);
