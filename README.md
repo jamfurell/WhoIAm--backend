@@ -23,9 +23,8 @@ As a user, I want to be able to delete my scores/results.
 
 ## Technologies Used
 
-* REACT
 * MONGODB
-* @MATERIAL UI
+* MONGOOSE
 
 ## Link to the Frontend
 https://github.com/jamfurell/WhoIAm-frontend
