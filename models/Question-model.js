@@ -26,13 +26,3 @@ module.exports = Question;
 
 
 
-
-
-// const QuestionSchema = new Schema ({
-//     name: {type: String, required: true},
-//     founded: {type: Date, default: Date.now},
-//     employees:{type: Number},
-//     active: Boolean,
-//     products: [{type: String}],
-//     CEO: {name: String, age: Number}
-// })
